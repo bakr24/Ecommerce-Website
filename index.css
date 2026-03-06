@@ -1,0 +1,290 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 80px;
+background:#ffffff;
+border-bottom:1px solid #e0e0e0;
+}
+
+/* Logo */
+
+.logo{
+width:120px;
+height:auto;
+display:block;
+object-fit:contain;
+}
+
+
+/* SEARCH */
+
+.search-box{
+display:flex;
+align-items:center;
+width:600px;
+}
+
+.search-wrapper{
+display:flex;
+flex:1;
+border:2px solid #0d6efd;
+border-radius:6px 0 0 6px;
+overflow:hidden;
+}
+
+.search-wrapper input{
+flex:1;
+padding:12px 15px;
+border:none;
+outline:none;
+font-size:15px;
+}
+
+.search-wrapper select{
+padding:0 12px;
+border:none;
+border-left:1px solid #ddd;
+background:#ffffff;
+cursor:pointer;
+font-size:14px;
+}
+
+.search-wrapper select:focus{
+outline:none;
+border:2px solid #0d6efd;
+}
+
+
+
+.search-box button{
+padding:13.5px 17px;
+border:none;
+background:#0d6efd;
+color:white;
+border-radius:0 6px 6px 0;
+cursor:pointer;
+font-size:15px;
+transition:0.2s;
+}
+
+.search-box button:hover{
+background:#0a58ca;
+}
+
+
+/* ICONS */
+
+.icons{
+display:flex;
+gap:25px;
+}
+
+.icon{
+text-align:center;
+color:#8b96a5;
+cursor:pointer;
+min-width:50px;
+transition:0.2s;
+}
+
+.icon i{
+font-size:20px;
+display:block;
+margin-bottom:3px;
+}
+
+.icon p{
+font-size:12px;
+margin:0;
+}
+
+.icon:hover{
+color:#2f80ed;
+}
+
+
+/* FOOTER */
+
+.footer{
+margin-top:60px;
+background:#f5f6f8;
+}
+
+/* Newsletter */
+
+.newsletter{
+text-align:center;
+background:#e9edf2;
+padding:40px 20px;
+}
+
+.newsletter h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.newsletter p{
+color:#666;
+margin-bottom:20px;
+}
+
+.newsletter-box{
+display:flex;
+justify-content:center;
+}
+
+.newsletter-box input{
+width:300px;
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px 0 0 5px;
+outline:none;
+}
+
+.newsletter-box button{
+padding:10px 20px;
+background:#2f80ed;
+color:white;
+border:none;
+border-radius:0 5px 5px 0;
+cursor:pointer;
+}
+
+.newsletter-box button:hover{
+background:#0a58ca;
+}
+
+
+/* Footer Columns */
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+padding:40px 80px;
+flex-wrap:wrap;
+}
+
+.footer-col{
+display:flex;
+flex-direction:column;
+gap:9px;
+font-size:14px;
+}
+
+.footer-col h4{
+margin-bottom:10px;
+font-size:16px;
+}
+
+.footer-col a{
+text-decoration:none;
+color:#555;
+transition:0.2s;
+}
+
+.footer-col a:hover{
+color:#2f80ed;
+}
+
+
+/* Brand */
+
+.logo-footer{
+width:120px;
+height:auto;
+display:block;
+margin-bottom:10px;
+object-fit:contain;
+}
+
+.brand p{
+width:200px;
+color:#666;
+margin:5px 0;
+}
+
+
+/* Social icons */
+
+.socials{
+display:flex;
+gap:6px;
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.socials i{
+display:flex;
+align-items:center;
+justify-content:center;
+width:32px;
+height:32px;
+background:#BDC3C7;
+color:#ffffff;
+border-radius:50%;
+font-size:14px;
+cursor:pointer;
+transition:all 0.2s ease;
+}
+
+.socials i:hover{
+transform:translateY(-3px);
+}
+
+.socials i.fa-facebook-f:hover{
+background:#1877F2;
+}
+
+.socials i.fa-x-twitter:hover{
+background:#000000;
+}
+
+.socials i.fa-linkedin-in:hover{
+background:#0077B5;
+}
+
+.socials i.fa-instagram:hover{
+background:#E4405F;
+}
+
+.socials i.fa-youtube:hover{
+background:#FF0000;
+}
+
+.socials i.fa-whatsapp:hover{
+background:green;
+}
+
+
+/* App buttons */
+
+.store-btn{
+width:120px;
+margin-top:5px;
+}
+
+
+/* Bottom Footer */
+
+.footer-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 80px;
+background:#e1e4e8;
+font-size:14px;
+}
