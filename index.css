@@ -15,9 +15,65 @@ scroll-behavior:smooth;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:20px 80px;
+padding:20px 80px 10px 80px;
 background:#ffffff;
 border-bottom:1px solid #e0e0e0;
+}
+
+/*navbar*/
+/* SUB-HEADER BASE */
+.sub-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding:  5px 80px; /* Very thin vertical padding */
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Spacing between items */
+}
+
+/* NAVIGATION ITEMS */
+.nav-item, .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1c1c1c;
+    text-decoration: none;
+    line-height: 1; /* Keeps the bar from expanding vertically */
+}
+
+/* Icon and Flag Sizing */
+.nav-item i.fa-chevron-down {
+    font-size: 10px;
+    color: #8b96a5;
+}
+
+.nav-flag {
+    width: 18px;
+    height: 12px;
+    object-fit: cover;
+    border-radius: 1px;
+}
+
+/* Hover effect for a professional feel */
+.nav-item:hover, .nav-link:hover {
+    color: #0d6efd;
+    cursor: pointer;
 }
 
 /* Logo */
@@ -27,6 +83,7 @@ width:120px;
 height:auto;
 display:block;
 object-fit:contain;
+margin-bottom: 0 !important;
 }
 
 
@@ -35,12 +92,15 @@ object-fit:contain;
 .search-box{
 display:flex;
 align-items:center;
-width:600px;
+width: 500px;
+height: 40px;
+margin-bottom: 0 !important;
 }
 
 .search-wrapper{
 display:flex;
 flex:1;
+height: 100%;
 border:2px solid #0d6efd;
 border-radius:6px 0 0 6px;
 overflow:hidden;
@@ -48,41 +108,39 @@ overflow:hidden;
 
 .search-wrapper input{
 flex:1;
-padding:12px 15px;
+padding:0px 15px;
 border:none;
 outline:none;
-font-size:15px;
+font-size:14px;
 }
 
 .search-wrapper select{
-padding:0 12px;
+padding:0 10px;
 border:none;
 border-left:1px solid #ddd;
 background:#ffffff;
 cursor:pointer;
 font-size:14px;
+height: 100%;
 }
 
 .search-wrapper select:focus{
 outline:none;
-border:2px solid #0d6efd;
+border:2px  #0d6efd;
 }
 
 
 
 .search-box button{
-padding:13.5px 17px;
+    height: 40px;
+padding:0px 20px;
 border:none;
 background:#0d6efd;
 color:white;
 border-radius:0 6px 6px 0;
 cursor:pointer;
-font-size:15px;
-transition:0.2s;
-}
-
-.search-box button:hover{
-background:#0a58ca;
+font-size:14px;
+font-weight: 500;
 }
 
 
@@ -91,6 +149,7 @@ background:#0a58ca;
 .icons{
 display:flex;
 gap:25px;
+margin-bottom: 0 !important;
 }
 
 .icon{
@@ -286,5 +345,22 @@ justify-content:space-between;
 align-items:center;
 padding:15px 80px;
 background:#e1e4e8;
-font-size:14px;
+
+}
+.footer-lang {
+    display: flex;
+    align-items: center; /* Vertically centers text with the flag */
+    gap: 8px; /* Controls the space between the word 'English' and the flag */
+}
+
+.footerp {
+    font-size: 14px;
+    color: #1c1c1c;
+    margin: 0; /* Removes default paragraph spacing that might push it up/down */
+}
+
+.footer-flag {
+    width: 22px; /* Set a specific width */
+    height: auto;
+    display: block;
 }
