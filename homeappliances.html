@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Accessories</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <img src="images/logo-colored.png" class="logo" alt="Brand Logo">
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search">
+                <select>
+                    <option>All category</option>
+                    <option>Electronics</option>
+                    <option>Clothes</option>
+                </select>
+            </div>
+            <button>Search</button>
+        </div>
+        <div class="icons">
+            <div class="icon"><i class="fa-solid fa-user"></i><p>Profile</p></div>
+            <div class="icon"><i class="fa-solid fa-message"></i><p>Message</p></div>
+            <div class="icon"><i class="fa-solid fa-heart"></i><p>Orders</p></div>
+            <div class="icon"><i class="fa-solid fa-cart-shopping"></i><p>My cart</p></div>
+        </div>
+    </header>
+
+    <nav class="sub-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="nav-item all-categories"><i class="fa-solid fa-bars"></i><span>All category</span></div>
+                <a href="#" class="nav-link">Hot offers</a>
+                <a href="#" class="nav-link">Gift boxes</a>
+                <a href="#" class="nav-link">Projects</a>
+                <div class="nav-item"><span>Help</span><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="nav-right">
+                <div class="nav-item"><span>English, USD</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="nav-item"><span>Ship to</span><img src="images/DE@2x.png" class="nav-flag"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="listing-layout" style="display: flex; gap: 20px;">
+            
+            <aside class="filter-sidebar" style="width: 250px;">
+               
+
+                <div class="filter-block">
+                    <h2 class="1" style="padding-bottom: 20px ;">Category</h2>
+                    <p>Mobile accessories</p>
+                    <p>Tablets</p>
+                </div>
+                <br>
+                 <hr style="border: 0.5px solid #ddd;">
+                <br>
+                <div class="filter-block">
+                    <h2 class="1" style="padding-bottom: 20px ;">Brands</h2>
+                    <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Samsung</label>
+                    <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Apple</label>
+                    <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Huwaei</label>
+                    <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Xaomi</label>
+                    <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Oppo</label>
+                    <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Infinix</label>
+                </div>
+                <br>
+                 <hr style="border: 0.5px solid #ddd;">
+<br>
+                 <div class="filter-section" style="margin-bottom: 25px;">
+            <div style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+    <h2 class="1" style="padding-bottom: 20px;">Features</h2>
+    <img src="images/Vector2.png" style="width: 12px; padding-bottom: 15px;" alt="arrow">
+</div>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Metallic</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Plastic cover</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> 8GB Ram</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Super power</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox" style="margin-right: 10px;"> Large Memory</label>
+            <p style="color: #0d6efd; cursor: pointer; font-size: 14px; margin-top: 5px;">See all</p>
+        </div>
+   
+
+    <hr style="border: 0; border-top: 1px solid #eee;">
+
+    <div class="filter-section" style="margin: 20px 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 class="1" style="padding-bottom: 20px;">Price range</h2>
+            <img src="images/Vector2.png" style="width: 12px; padding-bottom: 15px;" alt="arrow">
+        </div>
+        
+        <input type="range" style="width: 100%; margin: 20px 0; accent-color: #0d6efd;">
+        
+        <div style="display: flex; gap: 10px;">
+            <div style="flex: 1;">
+                <label style="font-size: 12px;">Min</label>
+                <input type="number" placeholder="0" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <label style="font-size: 12px;">Max</label>
+                <input type="number" placeholder="999999" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+        </div>
+        <button style="width: 100%; margin-top: 15px; padding: 10px; background: white; border: 1px solid #0d6efd; color: #0d6efd; border-radius: 4px; cursor: pointer; font-weight: bold;">Apply</button>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #eee;">
+
+    <div class="filter-section" style="margin-top: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 class="1" style="padding-bottom: 20px;">Condition</h2>
+            <img src="images/Vector2.png" style="width: 12px; padding-bottom: 15px;" alt="arrow">
+        </div>
+        <div style="margin-top: 15px;">
+            <label style="display: block; margin-bottom: 10px;"><input type="radio" name="condition" checked style="margin-right: 10px;"> Any</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="radio" name="condition" style="margin-right: 10px;"> Refurbished</label>
+        </div>
+    </div>
+            </aside>
+           
+
+            <section class="product-list" style="flex: 1;">
+                <div class="product-item-horizontal" style="display: flex; background: #ffffff; border: 1px solid #ddd; padding: 20px; margin-bottom: 15px; border-radius: 6px;">
+                    <img src="images/mobile red.png" style="width: 150px; object-fit: contain;">
+                    <div class="item-details" style="margin-left: 20px;">
+                        <h3>Iphone 16 Pro</h3>
+                        <p class="smalltext" style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur...</p>
+                        <br>
+                        <p style="font-weight: bold; font-size: 20px;">$998.00</p>
+                        <br>
+                       <a href="iphone17pro.html" class="view-btn-of-products">View</a>
+</div>
+                </div>
+
+                <div class="product-item-horizontal" style="display: flex; background: #ffffff; border: 1px solid #ddd; padding: 20px; margin-bottom: 15px; border-radius: 6px;">
+                    <img src="images/mobile.png" style="width: 150px; object-fit: contain;">
+                    <div class="item-details" style="margin-left: 20px;">
+                        <h3>Infinix hot 10</h3>
+                        <p class="smalltext" style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur...</p>
+                        <br>
+                        <p style="font-weight: bold; font-size: 20px;">$998.00</p>
+                        <br>
+                       <a href="infinixhot10.html" class="view-btn-of-products">View</a>
+                    </div>
+                </div>
+
+                <div class="product-item-horizontal" style="display: flex; background: #ffffff; border: 1px solid #ddd; padding: 20px; margin-bottom: 15px; border-radius: 6px;">
+                    <img src="images/tablet.png" style="width: 150px; object-fit: contain;">
+                    <div class="item-details" style="margin-left: 20px;">
+                        <h3>HP tablet</h3>
+                        <p class="smalltext" style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur...</p>
+                        <br>
+                        <p style="font-weight: bold; font-size: 20px;">$998.00</p>
+                        <br>
+                       <a href="hptablet.html" class="view-btn-of-products">View</a>
+                    </div>
+                </div>
+
+                <div class="product-item-horizontal" style="display: flex; background: #ffffff; border: 1px solid #ddd; padding: 20px; margin-bottom: 15px; border-radius: 6px;">
+                    <img src="images/mobile red.png" style="width: 150px; object-fit: contain;">
+                    <div class="item-details" style="margin-left: 20px;">
+                        <h3>Iphone 17</h3>
+                        <p class="smalltext" style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur...</p>
+                        <br>
+                        <p style="font-weight: bold; font-size: 20px;">$998.00</p>
+                        <br>
+                       <a href="iphone17.html" class="view-btn-of-products">View</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer"> 
+        <div class="footer-container">
+        <div class="footer-col brand">
+            <img src="images/logo-colored.png" class="logo-footer">
+            <p>Best information about the company goes here but now lorem ipsum is</p>
+            <div class="socials">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Partnership</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Information</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Money Refund</a>
+            <a href="#">Shipping</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>For users</h4>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+            <a href="#">Settings</a>
+            <a href="#">My Orders</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Get app</h4>
+            <img src="images/googleplay.png" class="store-btn" alt="App Store">
+            <img src="images/market-button.png" class="store-btn" alt="Google Play">
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2023 Ecommerce.</p>
+        <div class="footer-lang">
+            <span>English</span>
+            <img src="images/GB@2x.png" alt="UK Flag" class="footer-flag">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
