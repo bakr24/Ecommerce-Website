@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
+
 <body>
 
     <header class="header">
@@ -23,22 +25,27 @@
             <button>Search</button>
         </div>
         <div class="icons">
-            <div class="icon"><i class="fa-solid fa-user"></i><p>Profile</p></div>
-            <div class="icon"><i class="fa-solid fa-message"></i><p>Message</p></div>
-            <div class="icon"><i class="fa-solid fa-heart"></i><p>Orders</p></div>
-            <div class="icon"><i class="fa-solid fa-cart-shopping"></i><p>My cart</p></div>
+            <div class="icon"><a href="profile.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Profile</a></div>
+            <div class="icon"><a href="message.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Message</a></div>
+            <div class="icon"><a href="order.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>My Order</a></div>
+            <div class="icon"><a href="cart.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Cart</a></div>
         </div>
     </header>
 
     <nav class="sub-header">
         <div class="nav-container">
             <div class="nav-left">
-                <div class="nav-item all-categories"><i class="fa-solid fa-bars"></i><span>All category</span></div>
+                <div class="nav-item all-categories"> 
+                    <i class="fa-solid fa-bars"></i>
+ 
+                  <a  href="allcategories.html" style="text-decoration: none; color: black;"> Category</a></div>
                 <a href="#" class="nav-link">Hot offers</a>
                 <a href="#" class="nav-link">Gift boxes</a>
                 <a href="#" class="nav-link">Projects</a>
-                <div class="nav-item"><span>Help</span><i class="fa-solid fa-chevron-down"></i></div>
-            </div>
+              <a href="help.html" style="text-decoration: none; color: black; background-color: \;">Help</a>
+                 
+            </a>
+        </div>
             <div class="nav-right">
                 <div class="nav-item"><span>English, USD</span><i class="fa-solid fa-chevron-down"></i></div>
                 <div class="nav-item"><span>Ship to</span><img src="images/DE@2x.png" class="nav-flag"><i class="fa-solid fa-chevron-down"></i></div>
@@ -72,8 +79,10 @@
                         <img src="images/user.png" alt="User">
                         <p>Hi, user<br>let's get started</p>
                     </div>
-                    <button class="btn-blue">Join now</button>
-                    <button class="btn-white-outline">Log in</button>
+                    <a href="joinnow.html" class="btn-blue">Join now</a> 
+                  
+                    
+                   <a href="login.html" class="btn btn-login">Log in</a>
                 </div>
                 <div class="promo-card orange"><p>Get US $10 off with a new supplier</p></div>
                 <div class="promo-card teal"><p>Send quotes with supplier preferences</p></div>
@@ -147,38 +156,61 @@
         <button class="btn-white">Source now</button>
     </div>
     <div class="category-grid">
+        <a href="smartwatch.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Smart watches</p><span>From <br>USD 19</span></div>
-            <img src="images/smartwatch.jpg">
+            <img src="images/smartwatch.png">
         </div>
+        </a>
+
+        <a href="camera.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Cameras</p><span>From <br>USD 89</span></div>
             <img src="images/camera.png">
         </div>
+    </a>
+
+    <a href="headphone.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Headphones</p><span>From <br>USD 10</span></div>
             <img src="images/headphone white.png">
         </div>
+        </a>
+
+        <a href="kettle.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Electric Kettle</p><span>From <br>USD 90</span></div>
             <img src="images/coffee cup.png">
         </div>
+        </a>
+
+        <a href="headphone.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Gaming set</p><span>From <br>USD 35</span></div>
             <img src="images/headphone.png">
         </div>
+        </a>
+
+        <a href="laptop.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Laptops & PC</p><span>From <br>USD 340</span></div>
             <img src="images/laptop.png">
         </div>
+        </a>
+
+        <a href="mobile.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Tablets</p><span>From <br>USD 19</span></div>
             <img src="images/tablet.png">
         </div>
+        </a>
+
+        <a href="mobile.html" style="text-decoration: none;">
         <div class="grid-item">
             <div class="item-info"><p>Mobiles</p><span>From <br>USD 240</span></div>
             <img src="images/mobile red.png">
         </div>
+        </a>
     </div>
 </section>
 
@@ -217,16 +249,23 @@
     <br>
     <div class="recommended-grid">
         <div class="rec-card">
-            <div class="rec-img">
-                <img src="images/shirt.png" alt="T-shirt">
-            </div>
-            <div class="rec-info">
-                <p class="rec-price">$10.30</p>
-                <p class="rec-desc">T-shirts with multiple colors, for men</p>
-            </div>
+    <a href="shirt.html" style="text-decoration:none">
+        <div class="rec-img">
+            <img src="images/shirt.png" alt="T-shirt">
         </div>
+        <div class="rec-info">
+            <p class="rec-price">$10.30</p>
+         
+            <p class="rec-desc">T-shirts with multiple colors, for men</p>
+        </div>
+    </a>
+   <button class="add-to-cart-btn" data-name="T-shirt" data-price="10.30" data-image="images/shirt.png">
+    Add to Cart
+</button>
+</div>
 
         <div class="rec-card">
+            <a href="jacket.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/jacket.png" alt="Jacket">
             </div>
@@ -234,9 +273,14 @@
                 <p class="rec-price">$10.30</p>
                 <p class="rec-desc">Jackets Winter Specials</p>
             </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/jacket.png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="coat.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/coat.png" alt="Suit">
             </div>
@@ -244,9 +288,14 @@
                 <p class="rec-price">$12.50</p>
                 <p class="rec-desc">Winter coat medium size</p>
             </div>
+            </a>
+         <button class="add-to-cart-btn" data-name="Coat" data-price="30.30" data-image="images/coat.png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="wallet.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/wallet.png" alt="Wallet">
             </div>
@@ -254,9 +303,15 @@
                 <p class="rec-price">$34.00</p>
                 <p class="rec-desc">Leather wallet</p>
             </div>
+            </a>
+           
+            <button class="add-to-cart-btn" data-name="Wallet" data-price="20.30" data-image="images/wallet .png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="bag.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/bag.png" alt="Bag">
             </div>
@@ -264,9 +319,15 @@
                 <p class="rec-price">$99.00</p>
                 <p class="rec-desc">Jeans bag for travel for men</p>
             </div>
+            </a>
+           
+            <button class="add-to-cart-btn" data-name="Bag" data-price="20.30" data-image="images/Bag.png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="pant.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/pant.png" alt="Shorts">
             </div>
@@ -274,9 +335,15 @@
                 <p class="rec-price">$9.99</p>
                 <p class="rec-desc">Men shorts for picnic</p>
             </div>
+            </a>
+          
+            <button class="add-to-cart-btn" data-name="Pant" data-price="20.30" data-image="images/pant.png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="headphone.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/headphone white.png" alt="Headphones">
             </div>
@@ -284,9 +351,15 @@
                 <p class="rec-price">$8.99</p>
                 <p class="rec-desc">Headset for gaming with mic</p>
             </div>
+            </a>
+          
+            <button class="add-to-cart-btn" data-name="Headphone" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="smartwatch.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/smartwatch.jpg" alt="Bag">
             </div>
@@ -294,9 +367,14 @@
                 <p class="rec-price">$10.30</p>
                 <p class="rec-desc">Smartwatch silver color modern</p>
             </div>
+        </a>
+            <button class="add-to-cart-btn" data-name="Watch" data-price="20.30" data-image="images/smartwatch.png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="pot.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/pot.png" alt="Pot">
             </div>
@@ -304,9 +382,15 @@
                 <p class="rec-price">$10.30</p>
                 <p class="rec-desc">Pot with different styles</p>
             </div>
+            </a>
+         
+            <button class="add-to-cart-btn" data-name="Pot" data-price="20.30" data-image="images/pot.png">
+    Add to Cart
+</button>
         </div>
 
         <div class="rec-card">
+            <a href="kettle.html" style="text-decoration: none;">
             <div class="rec-img">
                 <img src="images/coffee cup.png" alt="Kettle">
             </div>
@@ -314,7 +398,13 @@
                 <p class="rec-price">$80.95</p>
                 <p class="rec-desc">Electric kettle</p>
             </div>
+        </a>
+   
+            <button class="add-to-cart-btn" data-name="Kettle" data-price="20.30" data-image="images/coffee cup.png">
+    Add to Cart
+</button>
         </div>
+    
     </div>
 </section>
 
@@ -475,6 +565,6 @@
         </div>
     </div>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -6,8 +6,51 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<style>
+    /* Styling for the Add to Cart button on product cards */
+.add-to-cart-btn {
+    /* Base Styles */
+    width: 90%; 
+    margin: 15px auto;
+    display: block; 
+    padding: 12px 18px; 
+    
+    /* Font Styling */
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    
+    /* Color & Background */
+    background-color: #0d6efd; 
+    color: #ffffff; 
+    
+    /* Shape & Borders */
+    border: none; 
+    border-radius: 6px;
+    
+    /* Special Effects & Shadow */
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
 
+/* HOVER STATE*/
+.add-to-cart-btn:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3); 
+    transform: translateY(-2px); 
+}
+
+
+.add-to-cart-btn:active {
+    transform: translateY(1px) scale(0.98); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+</style>
+<body>
+<script src="script.js"></script>
     <header class="header">
         <img src="images/logo-colored.png" class="logo" alt="Brand Logo">
         <div class="search-box">

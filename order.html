@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | E-Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    /* Order Page Specific Styles */
+.order-page {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.active-order-card {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.card-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge.shipping {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-preview {
+    display: flex;
+    gap: 20px;
+}
+
+.status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-dot.completed { background-color: #28a745; }
+
+.btn-action {
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-action:hover { background: #f8f9fa; }
+</style>
+<body>
+<script src="script.js"></script>
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo-colored.png" class="logo" alt="Brand Logo">
+        </a>
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search orders...">
+                <select>
+                    <option>All category</option>
+                    <option>Electronics</option>
+                    <option>Clothes</option>
+                </select>
+            </div>
+            <button>Search</button>
+        </div>
+        <div class="icons">
+            <div class="icon"><a href="profile.html"><i class="fa-solid fa-user"></i><span>Profile</span></a></div>
+            <div class="icon"><a href="message.html"><i class="fa-solid fa-comment"></i><span>Message</span></a></div>
+            <div class="icon"><a href="order.html"><i class="fa-solid fa-box"></i><span>My Order</span></a></div>
+            <div class="icon"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a></div>
+        </div>
+    </header>
+
+    <nav class="sub-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="sub-back-btn" onclick="window.history.back()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="nav-item all-categories"> 
+                    <i class="fa-solid fa-bars"></i>
+                    <a href="allcategories.html">Category</a>
+                </div>
+                <a href="#" class="nav-link">Hot offers</a>
+                <a href="#" class="nav-link">Gift boxes</a>
+                <a href="#" class="nav-link">Projects</a>
+                <a href="help.html" class="nav-link">Help</a>
+            </div>
+            <div class="nav-right">
+                <div class="nav-item"><span>English, USD</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="nav-item"><span>Ship to</span><img src="images/DE@2x.png" class="nav-flag"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="content order-page">
+            <div class="order-header">
+                <h2>My Orders</h2>
+                <div class="order-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Processing</button>
+                    <button class="filter-btn">Shipped</button>
+                    <button class="filter-btn">Cancelled</button>
+                </div>
+            </div>
+
+            <section class="active-order-card">
+                <div class="card-header">
+                    <div>
+                        <strong>Order #ORD-2026-9921</strong>
+                        <p class="order-date">Placed on: Mar 15, 2026</p>
+                    </div>
+                    <span class="status-badge shipping">In Transit</span>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <div class="product-preview">
+                        <img src="https://via.placeholder.com/80" alt="Product">
+                        <div class="product-details">
+                            <h4>High-End Gaming Mouse</h4>
+                            <p>Qty: 1 | Color: Midnight Black</p>
+                            <p class="arrival-text">Expected Arrival: <strong>March 20, 2026</strong></p>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">View Details</button>
+                        <button class="btn-primary" onclick="alert('Tracking ID: PK-7721092')">Track Order</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-history">
+                <h3>Past Purchases</h3>
+                <div class="table-responsive">
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#88210</td>
+                                <td>Feb 12, 2026</td>
+                                <td>$85.00</td>
+                                <td><span class="status-dot completed"></span> Completed</td>
+                                <td><button class="btn-action" onclick="alert('Downloading Invoice...')">Invoice</button></td>
+                            </tr>
+                            <tr>
+                                <td>#87955</td>
+                                <td>Jan 05, 2026</td>
+                                <td>$120.00</td>
+                                <td><span class="status-dot completed"></span> Completed</td>
+                                <td><button class="btn-action">Buy Again</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

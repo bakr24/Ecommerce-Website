@@ -159,8 +159,51 @@ body {
 .user-info { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .user-info img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
 .user-info p { font-size: 14px; }
-.btn-blue { background: #0d6efd; color: #fff; border: none; width: 100%; padding: 8px; border-radius: 6px; margin-bottom: 5px; cursor: pointer; }
-.btn-white-outline { background: #fff; border: 1px; color: #0d6efd; width: 100%; padding: 8px; border-radius: 6px; cursor: pointer; }
+/* This targets the card containing the buttons */
+.user-card {
+    background-color: #eaf4ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px; /* Adjust based on your design */
+    display: flex;
+    flex-direction: column; /* Stacks everything top to bottom */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* THE FIX: Styles for the links to act like buttons */
+.btn-blue, .btn-login {
+    display: block;          /* This is CRITICAL to stop the overlapping */
+    width: 100%;             /* Makes both buttons the same width */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 8px;         /* Adds space between the buttons */
+    border-radius: 6px;
+    text-decoration: none;   /* Removes the underline */
+    font-size: 14px;
+    box-sizing: border-box;  /* Keeps padding from breaking width */
+}
+
+.btn-blue {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-login {
+    background-color: white;
+    color: #0d6efd;
+    border: 1px solid #333;
+}
 .promo-card { padding: 15px; color: #fff; border-radius: 6px; font-size: 14px; }
 .orange { background: #f38332; }
 .teal { background: #55bdc3; }
@@ -959,4 +1002,47 @@ body {
 
 .shop-now-btn:hover {
     background: #e67e00;
+}
+
+
+    /* Styling for the Add to Cart button on product cards */
+.add-to-cart-btn {
+    /* Base Styles */
+    width: 90%; 
+    margin: 15px auto;
+    display: block; 
+    padding: 12px 18px; 
+    
+    /* Font Styling */
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    
+    /* Color & Background */
+    background-color: #0d6efd; 
+    color: #ffffff; 
+    
+    /* Shape & Borders */
+    border: none; 
+    border-radius: 6px;
+    
+    /* Special Effects & Shadow */
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* HOVER STATE*/
+.add-to-cart-btn:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3); 
+    transform: translateY(-2px); 
+}
+
+
+.add-to-cart-btn:active {
+    transform: translateY(1px) scale(0.98); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }

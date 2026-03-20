@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Task: Styled Search Bar in Header */
+        header {
+            background-color: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .search-container input {
+            padding: 8px 15px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        /* Product Section Layout */
+        .product-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            display: flex;
+            gap: 40px;
+            border-radius: 12px;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #d9534f;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Task: Size Dropdown */
+        .options {
+            margin: 20px 0;
+        }
+
+        select {
+            padding: 10px;
+            width: 150px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .btn-cart {
+            background-color: #0d6efd;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-cart:hover { background-color: #0b5ed7; }
+
+        /* Customer Reviews Section */
+        .reviews {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .review-card {
+            border-left: 4px solid #0d6efd;
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<script src="script.js"></script>
+<header>
+    <div class="logo"><strong>Aurion</strong>Store</div>
+    <div class="search-container">
+        <input type="text" placeholder="Search products...">
+    </div>
+    <nav><a href="index.html" style="text-decoration: none; color: #333;">Home</a></nav>
+</header>
+
+<main>
+    <div class="product-container">
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400" alt="Blockchain Hardware Wallet">
+        </div>
+
+        <div class="product-details">
+            <h1>Secure Node Hardware</h1>
+            <p class="price">$299.00</p>
+            <p>High-performance hardware node designed for the AurionChain network. Pre-configured for immediate synchronization and staking.</p>
+
+            <div class="options">
+                <label>Select Version:</label><br><br>
+                <select>
+                    <option>Standard Edition</option>
+                    <option>Pro Edition (+ $100)</option>
+                    <option>Enterprise</option>
+                </select>
+            </div>
+
+            <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h3>Customer Reviews</h3>
+        <div class="review-card">
+            <strong>Ali R.</strong> - <em>"The setup was incredibly fast, definitely worth it for the AurionChain ecosystem."</em>
+        </div>
+        <div class="review-card">
+            <strong>Sara K.</strong> - <em>"Excellent build quality and very quiet fan."</em>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Task: Basic Interactivity
+    function addToCart() {
+        alert("Product has been added to your cart!");
+    }
+
+    // You can add search functionality logic here later
+</script>
+
+</body>
+</html>

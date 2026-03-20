@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | E-Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<style>
+    :root {
+    --primary: #4a90e2;
+    --bg-light: #f4f7f6;
+    --text-dark: #333;
+    --white: #ffffff;
+    --border: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-light);
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background: #0d6efd;
+    color: white;
+    padding: 20px;
+}
+
+.user-profile {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3e4f5f;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-container img {
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+}
+
+.side-nav a {
+    display: block;
+    color: #bdc3c7;
+    padding: 12px;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.side-nav a.active, .side-nav a:hover {
+    background: var(--primary);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.full-width { grid-column: span 2; }
+
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.status.shipped {
+    background: #e1f5fe;
+    color: #01579b;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.order-table th, .order-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.side-nav a i {
+    margin-right: 10px;
+    width: 20px; 
+}
+</style>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<div class="container">
+    <aside class="sidebar">
+        <div class="user-profile">
+            <div class="avatar-container">
+                <img src="images/user.png" alt="Profile Picture">
+                <button class="edit-avatar">Upload</i></button>
+            </div>
+            <h3>Myself</h3>
+            <p>Here to Explore</p>
+        </div>
+        <nav class="side-nav">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    
+    <a href="profile.html" class="active"><i class="fas fa-user"></i> My Profile</a>
+    <a href="orders.html"><i class="fas fa-shopping-bag"></i> My Orders</a>
+    <a href="messages.html"><i class="fas fa-envelope"></i> Messages <span class="badge">3</span></a>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+    <hr>
+    <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</nav>
+    </aside>
+
+    <main class="content">
+        <header class="content-header">
+            <h1>Account Settings</h1>
+            <p>Manage your public profile and account details.</p>
+        </header>
+
+        <div class="grid-layout">
+            <section class="card">
+                <h2><i class="fas fa-id-card"></i> Personal Information</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" value="Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" value="abubakar.baig1178@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+92 300 0000000">
+                    </div>
+                    <button class="btn-primary">Update Profile</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2><i class="fas fa-map-marker-alt"></i> Shipping Address</h2>
+                <div class="address-item">
+                    <strong>Primary Address</strong>
+                    <p>University of Lahore, 1-Km Defence Road, Lahore, Pakistan.</p>
+                    <div class="actions">
+                        <a href="#" style="text-decoration: none; color: black;">Edit</a> | <a href="#" style="text-decoration: none; color: black;">Remove</a>
+                    </div>
+                </div>
+                <button class="btn-primary">+ Add New Address</button>
+            </section>
+
+            <section class="card full-width">
+                <h2><i class="fas fa-clock"></i> Recent Orders</h2>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-9921</td>
+                            <td>Mar 15, 2026</td>
+                            <td><span class="status shipped">Shipped</span></td>
+                            <td>$120.00</td>
+                            <td><a href="orders.html" style="text-decoration: none; color: black;  " >View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script>
+    const updateBtn = document.querySelector('.btn-primary');
+
+    updateBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        Swal.fire({
+            title: 'Success!',
+            text: 'Your profile is updated',
+            icon: 'success',
+            confirmButtonColor: '#4a90e2', 
+            confirmButtonText: 'Good'
+        });
+    });
+</script>
+
+</body>
+</html>

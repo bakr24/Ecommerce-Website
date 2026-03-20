@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | E-Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    /* Layout Structure */
+.message-interface {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.chat-container {
+    display: flex;
+    height: 75vh; /* Set a fixed height */
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Left Sidebar (Inbox) */
+.inbox-list {
+    width: 300px;
+    border-right: 1px solid #dee2e6;
+    background: #fff;
+    overflow-y: auto;
+}
+
+.chat-item {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+}
+
+.chat-item.active { background-color: #e7f3ff; }
+
+.chat-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Right Side (Active Chat) */
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #dee2e6;
+    background: #fff;
+}
+
+.chat-history {
+    flex: 1;
+    padding: 20px;
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+/* Message Bubbles */
+.msg {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 70%;
+    position: relative;
+    font-size: 14px;
+}
+
+.incoming {
+    background: #ffffff;
+    align-self: flex-start;
+    border: 1px solid #dee2e6;
+}
+
+.outgoing {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.time {
+    display: block;
+    font-size: 10px;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+/* Input Area */
+.chat-input {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    background: #fff;
+    border-top: 1px solid #dee2e6;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+}
+
+.btn-send {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+</style>
+    <body>
+        <script src="script.js"></script>
+    <header class="header">
+        <img src="images/logo-colored.png" class="logo" alt="Brand Logo">
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search">
+                <select>
+                    <option>All category</option>
+                    <option>Electronics</option>
+                    <option>Clothes</option>
+                </select>
+            </div>
+            <button>Search</button>
+        </div>
+        <div class="icons">
+            <div class="icon"><a href="profile.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Profile</a></div>
+            <div class="icon"><a href="message.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Message</a></div>
+            <div class="icon"><a href="order.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>My Order</a></div>
+            <div class="icon"><a href="cart.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Cart</a></div>
+        </div>
+    </header>
+
+    <nav class="sub-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="nav-item all-categories"> 
+                    <i class="fa-solid fa-bars"></i>
+ 
+                  <a  href="allcategories.html" style="text-decoration: none; color: black;"> Category</a></div>
+                <a href="#" class="nav-link">Hot offers</a>
+                <a href="#" class="nav-link">Gift boxes</a>
+                <a href="#" class="nav-link">Projects</a>
+              <a href="help.html" style="text-decoration: none; color: black; background-color: \;">Help</a>
+                 
+            </a>
+        </div>
+            <div class="nav-right">
+                <div class="nav-item"><span>English, USD</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="nav-item"><span>Ship to</span><img src="images/DE@2x.png" class="nav-flag"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+<div class="container">
+    
+
+    <main class="content message-interface">
+        <div class="chat-container">
+           <div class="inbox-list">
+    <div class="chat-item active" onclick="switchChat('support')">
+        <i class="fas fa-headset fa-2x"></i>
+        <div class="chat-info">
+            <h4>Customer Support</h4>
+            <p>How can we help you today?</p>
+        </div>
+    </div>
+    <div class="chat-item" onclick="switchChat('seller')">
+        <i class="fas fa-store fa-2x"></i>
+        <div class="chat-info">
+            <h4>Tech-Giant Seller</h4>
+            <p>Your order #ORD-9921 is ready.</p>
+        </div>
+    </div>
+</div>
+
+            <div class="chat-window">
+                <div class="chat-header">
+                    <h4>Customer Support</h4>
+                    <span class="status-online">Online</span>
+                </div>
+                
+                <div class="chat-history">
+                    <div class="msg incoming">
+                        <p>Hello! We noticed you were looking at your recent order. Do you need help with shipping?</p>
+                        <span class="time">10:30 AM</span>
+                    </div>
+                    <div class="msg outgoing">
+                        <p>Yes, I wanted to know when it will arrive in Lahore.</p>
+                        <span class="time">10:32 AM</span>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message here...">
+                    <button class="btn-send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script>
+    const chatHeader = document.querySelector('.chat-header h4');
+    const chatHistory = document.querySelector('.chat-history');
+    const messageInput = document.querySelector('.chat-input input');
+    const sendBtn = document.querySelector('.btn-send');
+
+    // 1. Function to switch chats
+    function switchChat(chatType) {
+        // Remove 'active' class from all items and add to clicked one
+        document.querySelectorAll('.chat-item').forEach(item => item.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+
+        if (chatType === 'support') {
+            chatHeader.innerText = "Customer Support";
+            chatHistory.innerHTML = '<div class="msg incoming"><p>Hello! How can we help you today?</p></div>';
+        } else {
+            chatHeader.innerText = "Tech-Giant Seller";
+            chatHistory.innerHTML = '<div class="msg incoming"><p>Hello! Your order #ORD-9921 is ready for pickup.</p></div>';
+        }
+    }
+
+    // 2. Function to send message
+    function sendMessage() {
+        const text = messageInput.value.trim();
+        if (text !== "") {
+            const newMsg = document.createElement('div');
+            newMsg.classList.add('msg', 'outgoing');
+            newMsg.innerHTML = `<p>${text}</p><span class="time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>`;
+            
+            chatHistory.appendChild(newMsg);
+            messageInput.value = "";
+            chatHistory.scrollTop = chatHistory.scrollHeight; // Auto-scroll to bottom
+        }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    messageInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
+</script>
+
+
+
+
+</body>
+</html>

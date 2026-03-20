@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
+<script src="script.js"></script>
     <header class="header">
         <img src="images/logo-colored.png" class="logo" alt="Brand Logo">
         <div class="search-box">
@@ -23,10 +23,10 @@
             <button>Search</button>
         </div>
         <div class="icons">
-            <div class="icon"><i class="fa-solid fa-user"></i><p>Profile</p></div>
-            <div class="icon"><i class="fa-solid fa-message"></i><p>Message</p></div>
-            <div class="icon"><i class="fa-solid fa-heart"></i><p>Orders</p></div>
-            <div class="icon"><i class="fa-solid fa-cart-shopping"></i><p>My cart</p></div>
+            <div class="icon"><a href="profile.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Profile</a></div>
+            <div class="icon"><a href="message.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Message</a></div>
+            <div class="icon"><a href="order.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>My Order</a></div>
+            <div class="icon"><a href="cart.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Cart</a></div>
         </div>
     </header>
 
@@ -352,6 +352,24 @@
         </div>
     </div>
 </footer>
+<script>
+    function addToCart(name, price, image) {
+    // 1. Get existing cart from LocalStorage or start empty
+    let cart = JSON.parse(localStorage.getItem('myCart')) || [];
 
+    // 2. Check if item already exists
+    let existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.qty += 1;
+    } else {
+        cart.push({ name, price, image, qty: 1 });
+    }
+
+    // 3. Save back to LocalStorage
+    localStorage.setItem('myCart', JSON.stringify(cart));
+    alert(name + " added to cart!");
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  
+
+/* 2. Style the header to have internal space */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* 3. Add space to your grid section */
+.recommended-grid {
+    display: grid;
+    padding: 0 40px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /* Space between the cards */
+    padding-bottom: 50px; /* Space at the very bottom of the page */
+}
+</style>
+
+      <body>
+        <header class="header">
+        <img src="images/logo-colored.png" class="logo" alt="Brand Logo">
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search">
+                <select>
+                    <option>All category</option>
+                    <option>Electronics</option>
+                    <option>Clothes</option>
+                </select>
+            </div>
+            <button>Search</button>
+        </div>
+         <div class="icons">
+            <div class="icon"><a href="profile.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Profile</a></div>
+            <div class="icon"><a href="message.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Message</a></div>
+            <div class="icon"><a href="order.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>My Order</a></div>
+            <div class="icon"><a href="cart.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Cart</a></div>
+        </div>
+    </header>
+
+    <br>
+
+<h1 style="margin-left: 30px;">All Categories</h1>
+    <br>
+    <div class="recommended-grid">
+        <div class="rec-card">
+            <a href="shirt.html" style="text-decoration:none">
+            <div class="rec-img">
+                <img src="images/shirt.png" alt="T-shirt">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">T-shirts with multiple colors, for men</p>
+            </div>
+            </a>
+              <button class="add-to-cart-btn" data-name="Shirt" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="jacket.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/jacket.png" alt="Jacket">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Jackets Winter Specials</p>
+            </div>
+            </a>
+              <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="coat.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/coat.png" alt="Suit">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$12.50</p>
+                <p class="rec-desc">Winter coat medium size</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="coat" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="wallet.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/wallet.png" alt="Wallet">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$34.00</p>
+                <p class="rec-desc">Leather wallet</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="wallet" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="bag.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/bag.png" alt="Bag">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$99.00</p>
+                <p class="rec-desc">Jeans bag for travel for men</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Bag" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="pant.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/pant.png" alt="Shorts">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$9.99</p>
+                <p class="rec-desc">Men shorts for picnic</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Shorts" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="headphone.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/headphone white.png" alt="Headphones">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$8.99</p>
+                <p class="rec-desc">Headset for gaming with mic</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="headphone" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="smartwatch.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/smartwatch.png" alt="Bag">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Smartwatch silver color modern</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="smartwatch" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="pot.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/pot.png" alt="Pot">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Pot with different styles</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="pot" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="kettle.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/coffee cup.png" alt="Kettle">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$80.95</p>
+                <p class="rec-desc">Electric kettle</p>
+            </div>
+        </a>
+        <button class="add-to-cart-btn" data-name="kettle" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="shirt.html" style="text-decoration:none">
+            <div class="rec-img">
+                <img src="images/lamp.png" alt="T-shirt">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">T-shirts with multiple colors, for men</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="shirt" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="pant.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/short1.jpg" alt="Jacket">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Jackets Winter Specials</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="short1" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="laptop.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/laptop.png" alt="Suit">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$12.50</p>
+                <p class="rec-desc">Winter coat medium size</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="laptop" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="mobile.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/mobile.png" alt="mobile">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$34.00</p>
+                <p class="rec-desc">Leather wallet</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="mobile" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="mouse.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/mouse.jpg" alt="mouse">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$99.00</p>
+                <p class="rec-desc">Jeans bag for travel for men</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="mouse" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="softchair.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/softchair.png" alt="softchair">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$9.99</p>
+                <p class="rec-desc">Men shorts for picnic</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="softchair" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="headphone.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/headphone white.png" alt="Headphones">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$8.99</p>
+                <p class="rec-desc">Headset for gaming with mic</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="headphone" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="camera.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/camera.png" alt="Bag">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Smartwatch silver color modern</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="camera" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="pot.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/pot.png" alt="Pot">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Pot with different styles</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="pot" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="kettle.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/coffee cup.png" alt="Kettle">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$80.95</p>
+                <p class="rec-desc">Electric kettle</p>
+            </div>
+        </a>
+        <button class="add-to-cart-btn" data-name="kettle" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="shirt.html" style="text-decoration:none">
+            <div class="rec-img">
+                <img src="images/shirt.png" alt="T-shirt">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">T-shirts with multiple colors, for men</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="shirt" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="jacket.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/jacket.png" alt="Jacket">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Jackets Winter Specials</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="coat.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/coat.png" alt="Suit">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$12.50</p>
+                <p class="rec-desc">Winter coat medium size</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="wallet.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/wallet.png" alt="Wallet">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$34.00</p>
+                <p class="rec-desc">Leather wallet</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="bag.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/bag.png" alt="Bag">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$99.00</p>
+                <p class="rec-desc">Jeans bag for travel for men</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="pant.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/pant.png" alt="Shorts">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$9.99</p>
+                <p class="rec-desc">Men shorts for picnic</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="headphone.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/headphone white.png" alt="Headphones">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$8.99</p>
+                <p class="rec-desc">Headset for gaming with mic</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="smartwatch.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/smartwatch.png" alt="Bag">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Smartwatch silver color modern</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="pot.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/pot.png" alt="Pot">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$10.30</p>
+                <p class="rec-desc">Pot with different styles</p>
+            </div>
+            </a>
+            <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="rec-card">
+            <a href="kettle.html" style="text-decoration: none;">
+            <div class="rec-img">
+                <img src="images/coffee cup.png" alt="Kettle">
+            </div>
+            <div class="rec-info">
+                <p class="rec-price">$80.95</p>
+                <p class="rec-desc">Electric kettle</p>
+            </div>
+        </a>
+        <button class="add-to-cart-btn" data-name="Jacket" data-price="20.30" data-image="images/headphone.png">
+    Add to Cart
+</button>
+        </div>
+    
+    </div>
+</section>
+<script src="script.js"></script>
+<script>
+document.querySelectorAll(".rec-card").forEach(card => {
+    const img = card.querySelector("img");
+    const button = card.querySelector(".add-to-cart-btn");
+
+    if (img && button) {
+        button.setAttribute("data-image", img.getAttribute("src"));
+    }
+});
+</script>
+      </body>
+    
+
+
+    
+
+</html>

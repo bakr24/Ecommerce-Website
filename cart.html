@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | E-Store</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    /* Layout Container */
+.cart-layout {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f8f9fa; /* Light grey background for contrast */
+}
+
+/* Left Section: Items */
+.cart-section {
+    flex: 2;
+}
+
+.cart-item-card {
+    background: white;
+    display: flex;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+.item-details h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.item-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.item-actions button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.item-actions button:hover { color: #d9534f; }
+
+/* Right Section: Sidebar */
+.checkout-section {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+}
+
+.summary-card, .payment-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.grand-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 15px;
+}
+
+/* Payment Inputs */
+.card-input-area {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.card-input-area input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Fixes the overflow issue */
+}
+
+.btn-checkout {
+    width: 100%;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-checkout:hover {
+    background: #0b5ed7;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+</style>
+<body>
+
+    <header class="header">
+        <a href="index.html">
+            <img src="images/logo-colored.png" class="logo" alt="Brand Logo">
+        </a>
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search products...">
+                <select><option>All category</option></select>
+            </div>
+            <button>Search</button>
+        </div>
+        <div class="icons">
+            <div class="icon"><a href="profile.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Profile</a></div>
+            <div class="icon"><a href="message.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Message</a></div>
+            <div class="icon"><a href="order.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>My Order</a></div>
+            <div class="icon"><a href="cart.html" style="text-decoration: none; color: black;"><i class="fa-solid fa-user"></i>Cart</a></div>
+        </div>
+    </header>
+
+    <nav class="sub-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="sub-back-btn" onclick="window.history.back()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="nav-item all-categories"><i class="fa-solid fa-bars"></i> Categories</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container cart-layout">
+        <main class="cart-section" id="cart-container">
+            <h3>Shopping Cart (<span id="cart-count">2</span> items)</h3>
+            
+            <div class="cart-item-card">
+                <img src="https://via.placeholder.com/100" alt="Product">
+                <div class="item-details">
+                    <h4>High-End Gaming Mouse</h4>
+                    <p class="seller">Seller: Tech-Giant</p>
+                    <div class="item-actions">
+                        <button class="remove-btn"><i class="fa-solid fa-trash"></i> Remove</button>
+                        <button class="wishlist-btn"><i class="fa-solid fa-heart"></i> Save for later</button>
+                    </div>
+                </div>
+                <div class="item-quantity">
+                    <button onclick="updateQty(this, -1)">-</button>
+                    <input type="number" value="1" readonly>
+                    <button onclick="updateQty(this, 1)">+</button>
+                </div>
+                <div class="item-total-price">$120.00</div>
+            </div>
+
+            <div class="cart-item-card">
+    <img src="https://via.placeholder.com/100" style="border-radius: 8px;" alt="Product">
+    
+    <div class="item-details" style="flex: 1; margin-left: 20px;">
+        <h4>High-End Gaming Mouse</h4>
+        <p class="seller" style="color: #888; font-size: 0.9rem;">Seller: Tech-Giant</p>
+        <div class="item-actions">
+            <button><i class="fa-solid fa-trash"></i> Remove</button>
+            <button><i class="fa-solid fa-heart"></i> Save for later</button>
+        </div>
+    </div>
+
+    <div style="text-align: right;">
+        <div class="item-quantity" style="margin-bottom: 10px;">
+            <button onclick="updateQty(this, -1)">-</button>
+            <input type="number" value="1" readonly>
+            <button onclick="updateQty(this, 1)">+</button>
+        </div>
+        <div class="item-total-price" style="font-weight: bold; font-size: 1.1rem;">$120.00</div>
+    </div>
+</div>
+        </main>
+
+        <aside class="checkout-section">
+            <div class="summary-card">
+                <h4>Order Summary</h4>
+                <div class="summary-line"><span>Subtotal</span> <span id="subtotal">$205.00</span></div>
+                <div class="summary-line"><span>Tax (5%)</span> <span id="tax">$10.25</span></div>
+                <div class="summary-line shipping"><span>Shipping</span> <span>Free</span></div>
+                <hr>
+                <div class="summary-line grand-total"><span>Total</span> <span id="final-total">$215.25</span></div>
+            </div>
+
+            <div class="payment-card">
+                <h4>Payment Method</h4>
+                <div class="payment-options">
+                    <label class="pay-option">
+                        <input type="radio" name="payment" value="card" checked onchange="toggleCard(true)">
+                        <div class="pay-info">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span>Credit / Debit Card</span>
+                        </div>
+                    </label>
+                    
+                    <div id="card-details" class="card-input-area">
+                        <input type="text" placeholder="Card Number" maxlength="16">
+                        <div class="card-row">
+                            <input type="text" placeholder="MM/YY" maxlength="5">
+                            <input type="text" placeholder="CVV" maxlength="3">
+                        </div>
+                    </div>
+
+                    <label class="pay-option">
+                        <input type="radio" name="payment" value="cash" onchange="toggleCard(false)">
+                        <div class="pay-info">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <span>Cash on Delivery</span>
+                        </div>
+                    </label>
+                </div>
+                <button class="btn-checkout" onclick="processCheckout()">Place Order</button>
+            </div>
+        </aside>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>

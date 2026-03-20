@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AurionChain</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .signup-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 { text-align: center; color: #333; margin-bottom: 20px; }
+
+        .input-group { margin-bottom: 15px; }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+        }
+
+        /* Phone Row Styling */
+        .phone-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .phone-row select {
+            width: 30%; /* For country code */
+        }
+
+        .phone-row input {
+            width: 70%;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 3px;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+          .back-home {
+            display: inline-block;
+            margin-top: 15px;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        .signup-btn:hover { background-color: #0b5ed7; }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        .footer a { color: #0d6efd; text-decoration: none; }
+    </style>
+</head>
+<body>
+<script src="script.js"></script>
+<div class="signup-card">
+    <h2>Create Account</h2>
+
+    <form action="#">
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="e.g. AbuBakar Baig" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="input-group">
+            <label>Phone Number</label>
+            <div class="phone-row">
+                <select>
+                    <option value="+92">PK +92</option>
+                    <option value="+1">US +1</option>
+                    <option value="+44">UK +44</option>
+                </select>
+                <input type="tel" placeholder="300 1234567" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Create a strong password" required>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" required>
+            <label>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+        </div>
+
+        <button type="submit" class="signup-btn">Join Now</button>
+    </form>
+
+    <div class="footer">
+        Already have an account? <a href="login.html">Log in</a>
+    </div>
+    <a href="index.html" class="back-home">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
