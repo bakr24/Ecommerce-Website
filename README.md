@@ -24,5 +24,5 @@ A clean, responsive, and feature-rich E-commerce frontend built using **HTML5**,
 
 | Home Page | Product View | Shopping Cart |
 |---|---|---|
-| ![Home](images/home.png) | ![Products](images/products.png) | ![Cart](images/cart.png) |
+| ![Home](images/home.png) | ![Products](images/product.png) | ![Cart](images/cart.png) |
 
