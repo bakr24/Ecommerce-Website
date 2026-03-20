@@ -1,6 +1,6 @@
 # Modern E-commerce Web Interface
 
-A clean, responsive, and feature-rich E-commerce frontend built using **HTML5**, **CSS3**, and **Vanilla JavaScript**. This project showcases a modern shopping experience with a focus on UI/UX and functional client-side logic.
+A clean, responsive, and feature-rich E-commerce frontend built using **HTML5**, **CSS3**, and **JavaScript**. This project showcases a modern shopping experience with a focus on  functional client side logic.
 
 ## 🚀 Features
 
@@ -11,7 +11,7 @@ A clean, responsive, and feature-rich E-commerce frontend built using **HTML5**,
 - **User Authentication:** - Sleek Login and Registration (Sign Up) forms.
   - Integrated "My Orders" and "Profile Settings" pages for a complete user journey.
 - **Responsive Design:** Fully optimized for different screen sizes with a clean sidebar and grid layout.
-- **Customer Support UI:** Includes a functional-looking chat interface and an "Inquiry" form for supplier requests.
+- **Customer Support :** Includes a functional looking chat interface and an "Inquiry" form for supplier requests.
 - **Modern UI Elements:** Hero banners, countdown timers for deals, hover effects, and a newsletter subscription footer.
 
 ## 🛠️ Tech Stack
@@ -24,10 +24,5 @@ A clean, responsive, and feature-rich E-commerce frontend built using **HTML5**,
 
 | Home Page | Product View | Shopping Cart |
 |---|---|---|
-| ![Home](path/to/home.png) | ![Products](path/to/products.png) | ![Cart](path/to/cart.png) |
+| ![Home](images/home.png) | ![Products](images/products.png) | ![Cart](images/cart.png) |
 
-## ⚙️ How to Run Locally
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/bakr24/Ecommerce-Website.git](https://github.com/bakr24/Ecommerce-Website.git)
